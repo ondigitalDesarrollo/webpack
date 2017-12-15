@@ -49,9 +49,53 @@ module.exports = {
                 })
             },
             {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                importLoaders: 1 
+                            }
+                        },
+                        'postcss-loader'
+                    ]
+                })
+            },
+            {
+                test: /\.less$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        'css-loader',
+                        {
+                            loader: 'less-loader',
+                            options: {
+                                noIeCompat: true
+                            }
+                        }
+                    ]
+                })
+            },
+            {
                 test: /\.styl$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'stylus-loader']
+                    use: [
+                        'css-loader', 
+                        {
+                            loader: 'stylus-loader',
+                            options: {
+                                use: [
+                                    require('nib'),
+                                    require('rupture')
+                                ],
+                                import: [
+                                    '~nib/lib/nib/index.styl',
+                                    '~rupture/rupture/index.styl'
+                                ]
+                            }
+                        }
+                    ]
                 })
             }
         ]

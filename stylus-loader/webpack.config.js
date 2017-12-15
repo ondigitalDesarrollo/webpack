@@ -51,7 +51,22 @@ module.exports = {
             {
                 test: /\.styl$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'stylus-loader']
+                    use: [
+                        'css-loader', 
+                        {
+                            loader: 'stylus-loader',
+                            options: {
+                                use: [
+                                    require('nib'),
+                                    require('rupture')
+                                ],
+                                import: [
+                                    '~nib/lib/nib/index.styl',
+                                    '~rupture/rupture/index.styl'
+                                ]
+                            }
+                        }
+                    ]
                 })
             }
         ]

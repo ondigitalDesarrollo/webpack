@@ -956,6 +956,8 @@ var _teachers3 = __webpack_require__(29);
 
 var _teachers4 = _interopRequireDefault(_teachers3);
 
+__webpack_require__(33);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.render)(_react2.default.createElement(_teachers4.default, { data: _teachers2.default.teachers }), document.getElementById('container'));
@@ -18303,7 +18305,7 @@ var _teacher = __webpack_require__(30);
 
 var _teacher2 = _interopRequireDefault(_teacher);
 
-__webpack_require__(31);
+__webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18355,6 +18357,8 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+__webpack_require__(31);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Teacher(props) {
@@ -18380,6 +18384,18 @@ exports.default = Teacher;
 
 /***/ }),
 /* 31 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 33 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
